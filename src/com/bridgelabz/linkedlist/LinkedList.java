@@ -71,6 +71,21 @@ public class LinkedList<T> {
         head=tempNode;
     }
     /**
+     * deleting the last element in the linked list.
+     */
+    public void deleteAtLast()
+    {
+        Node tempNode = new Node();
+        Node prevNode = new Node();
+        tempNode = head;
+        while(tempNode.next!=null)
+        {
+            prevNode=tempNode;
+            tempNode=tempNode.next;
+        }
+        prevNode.next=null;
+    }
+    /**
      * printing the elements in the list.
      */
     public void showList() {
