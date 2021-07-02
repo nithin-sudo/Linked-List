@@ -86,6 +86,22 @@ public class LinkedList<T> {
         prevNode.next=null;
     }
     /**
+     * searching the element in the linked list.
+     * @param data
+     * @param <T>
+     */
+    public <T extends Comparable>void searchElement(T data)
+    {
+        Node tempNode = new Node();
+        tempNode = head;
+        int position = 0;
+        while (tempNode.data != data) {
+            tempNode = tempNode.next;
+            position++;
+        }
+        System.out.println("element "+data+" found at position :"+position);
+    }
+    /**
      * printing the elements in the list.
      */
     public void showList() {

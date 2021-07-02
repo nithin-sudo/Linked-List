@@ -34,5 +34,12 @@ public class Runner {
         list4.deleteAtLast();
         list4.showList();
 
+        LinkedList<Integer> list5 = new <Integer>LinkedList();
+        list5.appendElement(56);
+        list5.insertAtPos(30,1);
+        list5.appendElement(70);
+        list5.showList();
+        list5.searchElement(30);
+
     }
 }
