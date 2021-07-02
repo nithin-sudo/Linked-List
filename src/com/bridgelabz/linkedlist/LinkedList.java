@@ -1,7 +1,7 @@
 package com.bridgelabz.linkedlist;
 
-public class LinkedList<T> {
-    Node head;
+public class LinkedList<T extends Comparable> {
+    Node <T>head;
     /**
      * adding elements at the back of each node.
      *
@@ -46,7 +46,7 @@ public class LinkedList<T> {
      * @param position
      * @param <T>
      */
-    public <T>void insertAtPos(T data,int position) {
+    public <T extends Comparable>void insertAtPos(T data,int position) {
         Node newNode = new Node();
         newNode.data = data;
         newNode.next = null;
@@ -118,6 +118,33 @@ public class LinkedList<T> {
         }
         nextNode=tempNode.next;
         tempNode.next=nextNode.next;
+    }
+    /**
+     * sorting the linked list using bubble sort.
+     * @param <T>
+     */
+    public <T extends Comparable>void sortList()
+    {
+        Node tempNode ;
+        Node nextNode ;
+        T temp = null;
+        tempNode = head;
+        System.out.println("after sorting the list:");
+        while(tempNode.next!=null)
+        {
+            nextNode=tempNode.next;
+            while (nextNode.next!=null)
+            {
+                if(tempNode.data.compareTo(nextNode.data)>0){
+                    temp = (T) tempNode.data;
+                    tempNode.data = nextNode.data;
+                    nextNode.data = temp;
+
+                }
+                nextNode=nextNode.next;
+            }
+            tempNode=tempNode.next;
+        }
     }
     /**
      * printing the elements in the list.
