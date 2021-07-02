@@ -14,5 +14,11 @@ public class Runner {
         list1.appendElement(70);
         list1.showList();
 
+        LinkedList<Integer> list2 = new <Integer>LinkedList();
+        list2.appendElement(56);
+        list2.insertAtPos(30,1);
+        list2.appendElement(70);
+        list2.showList();
+
     }
 }

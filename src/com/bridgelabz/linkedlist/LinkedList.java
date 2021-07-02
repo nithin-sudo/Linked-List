@@ -41,6 +41,26 @@ public class LinkedList<T> {
         }
     }
     /**
+     * inseriting elements at desired position.
+     * @param data
+     * @param position
+     * @param <T>
+     */
+    public <T>void insertAtPos(T data,int position) {
+        Node newNode = new Node();
+        newNode.data = data;
+        newNode.next = null;
+        Node tempNode = new Node();
+        tempNode = head;
+        int i = 0;
+        while (i < position-1) {
+            tempNode = tempNode.next;
+            i++;
+        }
+        newNode.next = tempNode.next;
+        tempNode.next = newNode;
+    }
+    /**
      * printing the elements in the list.
      */
     public void showList() {
