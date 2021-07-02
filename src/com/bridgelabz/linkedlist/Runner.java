@@ -20,5 +20,12 @@ public class Runner {
         list2.appendElement(70);
         list2.showList();
 
+        LinkedList<Integer> list3 = new <Integer>LinkedList();
+        list3.appendElement(56);
+        list3.insertAtPos(30,1);
+        list3.appendElement(70);
+        list3.deleteAtFirst();
+        list3.showList();
+
     }
 }

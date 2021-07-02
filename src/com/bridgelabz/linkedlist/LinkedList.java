@@ -61,6 +61,16 @@ public class LinkedList<T> {
         tempNode.next = newNode;
     }
     /**
+     * deleting the first element in the list.
+     */
+    public void deleteAtFirst()
+    {
+        Node tempNode;
+        tempNode =head;
+        tempNode=tempNode.next;
+        head=tempNode;
+    }
+    /**
      * printing the elements in the list.
      */
     public void showList() {
