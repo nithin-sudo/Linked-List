@@ -102,6 +102,24 @@ public class LinkedList<T> {
         System.out.println("element "+data+" found at position :"+position);
     }
     /**
+     * deleting element at any position.
+     * @param position
+     */
+    public void deleteFromPos(int position)
+    {
+        Node tempNode;
+        Node nextNode;
+        tempNode = head;
+        int i =1;
+        while (i < position-1)
+        {
+            tempNode=tempNode.next;
+            i++;
+        }
+        nextNode=tempNode.next;
+        tempNode.next=nextNode.next;
+    }
+    /**
      * printing the elements in the list.
      */
     public void showList() {
