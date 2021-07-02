@@ -6,6 +6,6 @@ public class Runner {
         list.addElement(70);
         list.addElement(36);
         list.addElement(50);
-        list.addElement(30);
+        list.showList();
     }
 }
